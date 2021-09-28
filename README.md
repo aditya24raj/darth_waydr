@@ -1,4 +1,4 @@
-# Waydroid-Installer
+# Install_Waydroid
 A bash script to automate waydroid installation on supported distros.
 
 Though tested only on 'hirsute', but probably should also work on other waydroid supported distros(focal, bullseye, droidian and ubports).
