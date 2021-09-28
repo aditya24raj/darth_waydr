@@ -7,12 +7,12 @@ Though tested only on 'hirsute', but probably should also work on other waydroid
 ### Method 1
 Copy and execute this-
 ```bash
-curl -# --proto '=https' --tlsv1.2 -Sf https://raw.githubusercontent.com/aditya24raj/waydroid-installer/main/install_waydroid.sh | bash
+curl -# --proto '=https' --tlsv1.2 -Sf https://raw.githubusercontent.com/aditya24raj/install_waydroid/main/install_waydroid.sh | bash
 ```
 ### or Method 2
 1. Download install_waydroid.sh from the repo
 ```bash
-curl -# --proto '=https' --tlsv1.2 -Sf https://raw.githubusercontent.com/aditya24raj/waydroid-installer/main/install_waydroid.sh > install_waydroid.sh
+curl -# --proto '=https' --tlsv1.2 -Sf https://raw.githubusercontent.com/aditya24raj/install_waydroid/main/install_waydroid.sh > install_waydroid.sh
 ```
 2. chmod +x install_waydroid.sh
 3. ./install_waydroid.sh
