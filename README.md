@@ -46,5 +46,5 @@ Restart shell/terminal if you cannot access following aliases -
 
 ## Gallery
 installation script running on hirsute
-![install_waydroid.sh running in dark purple ubuntu terminal](https://github.com/aditya24raj/install_waydroid/blob/main/install_waydroid.png?raw=true)
+![install_waydroid.sh running in dark purple ubuntu terminal](https://github.com/aditya24raj/install_waydroid/blob/main/install_waydroid_hirsute.png?raw=true)
 
