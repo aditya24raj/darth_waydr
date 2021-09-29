@@ -81,8 +81,7 @@ echo -e "\n    waydroid-start        to launch apps/waydroid from app drawer"
 echo      "    waydroid-start-full   to launch waydroid in full-screen"
 echo      "    waydroid-stop         to stop waydroid"
 
-echo -e "\n    Restart terminal/shell for these aliases to take effect.\n"
-
+echo -e "\n    Restart shell/terminal if you cannot access aliases.\n"
 
 else
 echo -e "\n3. Mobile Install"
