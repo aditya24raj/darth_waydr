@@ -17,7 +17,7 @@ curl -# --proto '=https' --tlsv1.2 -Sf https://raw.githubusercontent.com/aditya2
 2. chmod +x install_waydroid.sh
 3. ./install_waydroid.sh
 
-## Launch or Stop Waydroid on Desktop distros
+# Waydroid aliases on Desktop distros
 The installer creates aliases on desktop distros to easily launch and stop waydroid.
 
 Restart shell/terminal if you cannot access following aliases -
