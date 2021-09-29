@@ -67,16 +67,6 @@ sudo apt-get -q install waydroid || { echo -e "\nfailed to install waydroid"; ex
 sudo waydroid init || { echo -e "\nfailed to initialize waydroid"; exit; }
 
 
-else
-echo -e "\n3. Mobile Install"
-sudo -s
-apt update || { echo -e "\nfailed to update packages"; exit; }
-apt install waydroid || { echo -e "\nfailed to install waydroid"; exit; }
-waydroid init || { echo -e "\nfailed to initialize waydroid"; exit; }
-start waydroid || { echo -e "\nfailed to start waydroid-container"; exit; }
-fi
-
-
 echo -e "\n4. Creating Aliases "
 waydroid_stop="alias waydroid-stop='sudo waydroid session stop && sudo waydroid container stop'"
 waydroid_start="alias waydroid-start='waydroid-stop 2>/dev/null && sudo systemctl start waydroid-container && waydroid session start'"
@@ -92,6 +82,16 @@ echo      "    waydroid-start-full   to launch waydroid in full-screen"
 echo      "    waydroid-stop         to stop waydroid"
 
 echo -e "\n    Restart terminal/shell for these aliases to take effect.\n"
+
+
+else
+echo -e "\n3. Mobile Install"
+sudo -s
+apt update || { echo -e "\nfailed to update packages"; exit; }
+apt install waydroid || { echo -e "\nfailed to install waydroid"; exit; }
+waydroid init || { echo -e "\nfailed to initialize waydroid"; exit; }
+start waydroid || { echo -e "\nfailed to start waydroid-container"; exit; }
+fi
 
 
 
