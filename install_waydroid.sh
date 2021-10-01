@@ -8,7 +8,7 @@
 
 
 
-echo -e "Waydroid Installation"
+echo -e "\nWaydroid Installation"
 
 
 echo -e "\n1. Prequesites"
