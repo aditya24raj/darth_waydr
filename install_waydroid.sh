@@ -56,7 +56,7 @@ sudo apt-get -q install $dependancies || { echo -e "\nfailed to install dependan
 echo -e "\n2. Unified Install"
 
 sudo curl -# --proto '=https' --tlsv1.2 -Sf https://repo.waydro.id/waydroid.gpg --output /usr/share/keyrings/waydroid.gpg || { echo -e "\nfailed to fetch https://repo.waydro.id/waydroid.gpg using curl!"; exit; }
-sudo echo "deb [signed-by=/usr/share/keyrings/waydroid.gpg] https://repo.waydro.id/ $current_distro main" > /etc/apt/sources.list.d/waydroid.list
+echo "deb [signed-by=/usr/share/keyrings/waydroid.gpg] https://repo.waydro.id/ $current_distro main" | sudo tee /etc/apt/sources.list.d/waydroid.list >/dev/null || { echo -e "\nfailed to create waydroid.list"; exit; }
 sudo apt-get -q update || { echo -e "\nfailed to update packages"; exit; }
 
 
