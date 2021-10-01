@@ -4,18 +4,11 @@ A bash script to automate waydroid installation on supported distros.
 Though tested only on 'hirsute', but probably should also work on other waydroid supported distros(focal, bullseye, droidian and ubports).
 
 ## Installation
-### Method 1
-Copy and execute this-
+Execute the command below to download the script and install waydroid-
+
 ```bash
-curl -# --proto '=https' --tlsv1.2 -Sf https://raw.githubusercontent.com/aditya24raj/install_waydroid/main/install_waydroid.sh | bash
+curl --proto '=https' --tlsv1.2 -Sf https://raw.githubusercontent.com/aditya24raj/install_waydroid/main/install_waydroid.sh --output install_waydroid.sh && bash install_waydroid.sh
 ```
-### or Method 2
-1. Download install_waydroid.sh from the repo
-```bash
-curl -# --proto '=https' --tlsv1.2 -Sf https://raw.githubusercontent.com/aditya24raj/install_waydroid/main/install_waydroid.sh > install_waydroid.sh
-```
-2. chmod +x install_waydroid.sh
-3. ./install_waydroid.sh
 
 # Waydroid aliases on desktop distros
 The installer creates aliases on desktop distros to easily launch and stop waydroid.
