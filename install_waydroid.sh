@@ -11,9 +11,7 @@
 echo -e "Waydroid Installation"
 
 
-
 echo -e "\n1. Prequesites"
-
 
 # exit if not on supported distro else determine distro type
 supported_desktop_distros="focal bullseye hirsute"
@@ -35,8 +33,6 @@ echo "supported distributions are $supported_desktop_distros $supported_mobile_d
 exit
 fi
 
-
-
 # wayland session manager, exit if unsatisfied
 if [[ $XDG_SESSION_TYPE != "wayland" ]]
 then
@@ -52,10 +48,9 @@ echo "sudo apt-get -q install $dependancies"
 sudo apt-get -q install $dependancies || { echo -e "\nfailed to install dependancies"; exit; }
 
 
-
 echo -e "\n2. Unified Install"
 
-sudo curl -# --proto '=https' --tlsv1.2 -Sf https://repo.waydro.id/waydroid.gpg --output /usr/share/keyrings/waydroid.gpg || { echo -e "\nfailed to fetch https://repo.waydro.id/waydroid.gpg using curl!"; exit; }
+sudo curl --proto '=https' --tlsv1.2 -Sf https://repo.waydro.id/waydroid.gpg --output /usr/share/keyrings/waydroid.gpg || { echo -e "\nfailed to fetch https://repo.waydro.id/waydroid.gpg using curl!"; exit; }
 echo "deb [signed-by=/usr/share/keyrings/waydroid.gpg] https://repo.waydro.id/ $current_distro main" | sudo tee /etc/apt/sources.list.d/waydroid.list >/dev/null || { echo -e "\nfailed to create waydroid.list"; exit; }
 sudo apt-get -q update || { echo -e "\nfailed to update packages"; exit; }
 
@@ -65,7 +60,6 @@ if [[ $current_distro_type == "desktop" ]];
 then
 sudo apt-get -q install waydroid || { echo -e "\nfailed to install waydroid"; exit; }
 sudo waydroid init || { echo -e "\nfailed to initialize waydroid"; exit; }
-
 
 echo -e "\n4. Creating Aliases "
 waydroid_stop="alias waydroid-stop='sudo waydroid session stop && sudo waydroid container stop'"
@@ -83,6 +77,7 @@ echo      "    waydroid-stop         to stop waydroid"
 
 echo -e "\n    Restart shell/terminal if you cannot access aliases.\n"
 
+
 else
 echo -e "\n3. Mobile Install"
 sudo -s
@@ -91,7 +86,6 @@ apt install waydroid || { echo -e "\nfailed to install waydroid"; exit; }
 waydroid init || { echo -e "\nfailed to initialize waydroid"; exit; }
 start waydroid || { echo -e "\nfailed to start waydroid-container"; exit; }
 fi
-
 
 
 echo "Enjoy Waydroid!"
