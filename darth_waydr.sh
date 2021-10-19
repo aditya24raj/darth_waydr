@@ -5,7 +5,7 @@
 # author: aditya raj 
 
 
-echo -e "\nDesk Waydr"
+echo -e "\nDarth Waydr"
 echo "installs waydroid on focal, bullseye and hirsute"
 
 
