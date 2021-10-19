@@ -9,7 +9,7 @@ Execute the command below to download the script and install waydroid-
 wget -N -P ~/Downloads https://raw.githubusercontent.com/aditya24raj/desk_waydr/main/desk_waydr.sh && bash ~/Downloads/desk_waydr.sh
 ```
 
-# Waydroid Aliases
+## Waydroid Aliases
 The installer creates aliases to easily launch and stop waydroid.
 
 Restart shell/terminal if you cannot access following aliases -
