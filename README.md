@@ -1,17 +1,16 @@
-# Install_Waydroid
-A bash script to automate waydroid installation on supported distros.
+# Desk Waydr
+A bash script to install waydroid on supported desktop distributions(focal, bullseye and hirsute).
 
-Though tested only on 'hirsute', but probably should also work on other waydroid supported distros(focal, bullseye, droidian and ubports).
 
 ## Installation
 Execute the command below to download the script and install waydroid-
 
 ```bash
-curl --proto '=https' --tlsv1.2 -Sf https://raw.githubusercontent.com/aditya24raj/install_waydroid/main/install_waydroid.sh --output install_waydroid.sh && bash install_waydroid.sh
+wget -P ~/Downloads https://raw.githubusercontent.com/aditya24raj/desk_waydr/main/desk_waydr.sh && bash ~/Downloads/desk_waydr.sh
 ```
 
-# Waydroid aliases on desktop distros
-The installer creates aliases on desktop distros to easily launch and stop waydroid.
+# Waydroid Aliases
+The installer creates aliases to easily launch and stop waydroid.
 
 Restart shell/terminal if you cannot access following aliases -
 
@@ -33,11 +32,3 @@ Restart shell/terminal if you cannot access following aliases -
     ```bash
     waydroid-stop 2>/dev/null && sudo systemctl start waydroid-container && waydroid show-full-ui
     ```
-
-
-
-
-## Gallery
-installation script running on hirsute
-![install_waydroid.sh running in dark purple ubuntu terminal](https://github.com/aditya24raj/install_waydroid/blob/main/install_waydroid_hirsute.png?raw=true)
-
