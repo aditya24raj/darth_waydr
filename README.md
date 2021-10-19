@@ -1,4 +1,4 @@
-# Desk Waydr
+# Darth Waydr
 A bash script to install waydroid on supported desktop distributions(focal, bullseye and hirsute).
 
 
