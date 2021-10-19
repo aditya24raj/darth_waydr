@@ -6,7 +6,7 @@ A bash script to install waydroid on supported desktop distributions(focal, bull
 Execute the command below to download the script and install waydroid-
 
 ```bash
-wget -N -P ~/Downloads https://raw.githubusercontent.com/aditya24raj/desk_waydr/main/desk_waydr.sh && bash ~/Downloads/desk_waydr.sh
+wget -N -P ~/Downloads https://raw.githubusercontent.com/aditya24raj/darth_waydr/main/darth_waydr.sh && bash ~/Downloads/darth_waydr.sh
 ```
 
 ## Waydroid Aliases
