@@ -31,7 +31,7 @@ fi
 
 # install dependencies
 dependencies="python3 lxc curl wget"
-sudo apt-get -q install $dependancies || exit
+sudo apt-get -q install $dependencies || exit
 
 
 echo -e "\nUnified install"
