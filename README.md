@@ -1,5 +1,10 @@
 # Darth Waydr
-A bash script to install waydroid on debian-based distributions.
+darth waydr attempts waydroid installation on debian based distributions.  
+features-
+- one-click installation
+- uses bullseye releases if target distribution is not supported(thanks @electrikjesus)
+- detects if inside virtual machine and modifies waydroid_base.prop
+
 
 
 ## Installation
