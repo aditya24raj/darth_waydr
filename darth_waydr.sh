@@ -18,8 +18,8 @@ fallback_distro="bullseye"
 distro=$(lsb_release -sc)
 
 if [[ "$supported_distros" != *" $distro "* ]]; then
-	echo -e "\nwarning: unsupported distribution: $distro, trying with $fallback_distro instead"
-	
+	echo -e "\nwarning: unsupported distribution: $distro"
+	echo "warning: using fallback distribution: $fallback_distro"
 	distro=$fallback_distro
 fi
 
