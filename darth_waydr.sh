@@ -20,14 +20,14 @@ distro=$(lsb_release -sc)
 if [[ "$supported_distros" != *" $distro "* ]]; then
 	echo -e "\nwarning: unsupported distribution: $distro"
 	echo "trying with fall back distribution: $fallback_distro"
-	echo "supported distros are: $supported_distros"
+	echo -e "supported distros are: $supported_distros\n"
 	distro=$fallback_distro
 fi
 
 # check if windowing system is wayland
 if [[ $XDG_SESSION_TYPE != "wayland" ]]; then
 	echo -e "\nerror: unsupported display server: $XDG_SESSION_TYPE"
-	echo "please switch to wayland display server"
+	echo -e "please switch to wayland display server\n"
 	exit
 fi
 
@@ -54,14 +54,10 @@ lscpu | grep "Hypervisor vendor" && \
 	echo "modifying base prop to run inside virtual machine" && \
 	sudo sed -i "s/ro.hardware.gralloc=gbm/#ro.hardware.gralloc=gbm\nro.hardware.gralloc=default/" /var/lib/waydroid/waydroid_base.prop && \
 	sudo sed -i "s/ro.hardware.egl=mesa/#ro.hardware.egl=mesa\nro.hardware.egl=swiftshader/" /var/lib/waydroid/waydroid_base.prop
-
-# enable multi-window
-# TODO
-
-
+	
 
 echo -e "\ninstallation finished"
 echo "launch waydroid from apps menu"
-echo "during first launch(and during first launches after reboot),\nit may take 2-3 minutes before anything appears on screen"
+echo -e "during first launch(and during first launches after reboot),\nit may take 2-3 minutes before anything appears on screen\n"
 
 
