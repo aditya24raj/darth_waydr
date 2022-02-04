@@ -1,34 +1,22 @@
 # Darth Waydr
-A bash script to install waydroid on supported desktop distributions(focal, bullseye and hirsute).
+A bash script to install waydroid on debian-based distributions.
 
 
 ## Installation
 Execute the command below to download the script and install waydroid-
 
 ```bash
-wget https://raw.githubusercontent.com/aditya24raj/darth_waydr/main/darth_waydr.sh -O ~/Downloads/darth_waydr.sh && bash ~/Downloads/darth_waydr.sh
+wget -O - https://raw.githubusercontent.com/aditya24raj/darth_waydr/main/darth_waydr.sh | bash
 ```
 
-## Waydroid Aliases
-The installer creates aliases to easily launch and stop waydroid.
+## Usage
+launch waydroid from apps menu.  
+>
+>during first launch(and during first launches after reboot),  
+>it may take 2-3 minutes before anything appears on screen
 
-Restart shell/terminal if you cannot access following aliases -
+## Troubleshooting
+if nothing shows up even after 5-10 minutes-  
+troubleshoot using- https://docs.waydro.id/usage/install-on-desktops#troubleshooting  
+and ask about any errors you face on [telegram](https://t.me/WayDroid) or [matrix](https://matrix.to/#/#waydroid:connolly.tech)  
 
-- waydroid-stop
-  - to stop waydroid
-  - alias for
-    ```bash
-    sudo waydroid session stop && sudo waydroid container stop
-    ```
-- waydroid-start
-  - to launch apps/waydroid from app drawer
-  - alias for
-    ```bash
-    waydroid-stop 2>/dev/null && sudo systemctl start waydroid-container && waydroid session start
-    ```
-- waydroid-start-full
-  - to launch waydroid in full screen
-  - alias for
-    ```bash
-    waydroid-stop 2>/dev/null && sudo systemctl start waydroid-container && waydroid show-full-ui
-    ```
