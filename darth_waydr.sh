@@ -3,6 +3,9 @@
 # purpose : install waydroid on debian-based distributions
 # author  : aditya raj <aditya2400raj@gmail.com>
 
+# delete script file before exit
+trap "{ rm darth_waydr.sh ; exit; }" EXIT
+
 # trap any errors and exit
 trap "{ echo script failed. please try again. ; exit; }" ERR
 
