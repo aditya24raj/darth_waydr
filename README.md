@@ -5,7 +5,7 @@ attempts waydroid installation on debian based distributions.
 Execute the command below to download the script and install waydroid-
 
 ```bash
-wget -O - https://raw.githubusercontent.com/aditya24raj/darth_waydr/main/darth_waydr.sh | bash
+wget -O darth_waydr.sh https://raw.githubusercontent.com/aditya24raj/darth_waydr/main/darth_waydr.sh && bash darth_waydr.sh
 ```
 
 ## Usage
