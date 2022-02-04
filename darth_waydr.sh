@@ -62,4 +62,6 @@ lscpu | grep "Hypervisor vendor" && \
 
 echo -e "\ninstallation finished"
 echo "launch waydroid from apps menu"
-echo "first launch may take 2-3 minutes"
+echo "during first launch(and during first launches after reboot),\nit may take 2-3 minutes before anything appears on screen"
+
+
