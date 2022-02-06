@@ -55,7 +55,8 @@ echo -e "\nFinishing touches"
 lscpu | grep "Hypervisor vendor" && \
 	echo "modifying base prop to run inside virtual machine" && \
 	sudo sed -i "s/ro.hardware.gralloc=gbm/#ro.hardware.gralloc=gbm\nro.hardware.gralloc=default/" /var/lib/waydroid/waydroid_base.prop && \
-	sudo sed -i "s/ro.hardware.egl=mesa/#ro.hardware.egl=mesa\nro.hardware.egl=swiftshader/" /var/lib/waydroid/waydroid_base.prop
+	sudo sed -i "s/ro.hardware.egl=mesa/#ro.hardware.egl=mesa\nro.hardware.egl=swiftshader/" /var/lib/waydroid/waydroid_base.prop && \
+        sudo systemctl restart waydroid-container
 	
 
 echo -e "\ninstallation finished"
