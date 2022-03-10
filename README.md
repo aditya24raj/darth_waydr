@@ -1,5 +1,5 @@
 # Darth Waydr
-attempts waydroid installation on debian based distributions.  
+automates waydroid installation steps on debian-based distributions 
 
 ## Installation
 Execute the command below to download the script and install waydroid-
